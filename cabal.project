@@ -1,0 +1,2 @@
+packages: ./*.cabal
+        , /home/nullvalues/dev/hs/b56/b56.cabal

@@ -1,0 +1,54 @@
+cabal-version:      3.4
+name:               loft
+version:            0.1.1
+build-type:         Simple
+synopsis:
+    Flexible labor organization and forecast tracking (LOFT) system for professional services activity accounting based on allocations and
+    assertions rather than traditional account based budgeting.
+homepage:           http://github.com/nullvalues/loft
+license:            MIT
+license-file:       LICENSE
+author:             David Jacobsen
+maintainer:         nullvalues@gmail.com
+category:           Database
+extra-source-files: CHANGELOG.md
+
+Source-Repository head
+    type:           
+        git
+    location:       
+        git://github.com/nullvalues/loft.git
+    branch:        
+        main
+
+library
+    hs-source-dirs: 
+        src
+    exposed-modules:
+        Loft.Load
+        Loft.Data
+        Loft.Data.Structure
+    build-depends:      
+          base            ^>= 4.14.3.0
+        , integer-gmp     ^>= 1.0.3.0
+        , text            ^>= 1.2.4.1
+        , aeson           ^>= 2.0.0.0
+        , bytestring      ^>= 0.10.12.0
+        , mongoDB         ^>= 2.7.1.1
+        , b56             ^>= 0.1.0
+        , warp            ^>= 3.3.21
+        , yesod           ^>= 1.6.2
+    default-language: 
+        Haskell2010
+
+executable loft
+    hs-source-dirs:     
+        app
+    main-is:            
+        loft.hs
+    build-depends:      
+        base            ^>= 4.14.3.0,
+        loft
+    default-language: 
+        Haskell2010
+
