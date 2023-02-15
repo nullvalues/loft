@@ -1,4 +1,4 @@
-# loft prototyp
+# loft API prototype
 
 ## Purpose
 
